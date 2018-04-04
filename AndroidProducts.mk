@@ -18,3 +18,8 @@ LOCAL_PATH := device/samsung/a7xelte
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_PATH)/lineage_a7xelte.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_a7xelte-user \
+    lineage_a7xelte-userdebug \
+    lineage_a7xelte-eng
