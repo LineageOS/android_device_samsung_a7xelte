@@ -17,4 +17,4 @@
 LOCAL_PATH := device/samsung/a7xelte
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_PATH)/full_a7xelte.mk
+    $(LOCAL_PATH)/lineage_a7xelte.mk

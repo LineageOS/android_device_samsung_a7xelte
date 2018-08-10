@@ -16,19 +16,18 @@
 
 LOCAL_PATH := device/samsung/a7xelte
 
-$(call inherit-product, $(LOCAL_PATH)/full_a7xelte.mk)
-
-# Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l_mr1.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit common Lineage phone.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := lineage_a7xelte
 PRODUCT_DEVICE := a7xelte
-PRODUCT_MODEL := SM-a710F
-PRODUCT_BRAND := Samsung
+PRODUCT_MODEL := SM-A710F
+PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
