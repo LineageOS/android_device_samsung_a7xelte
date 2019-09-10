@@ -106,8 +106,8 @@ void vendor_load_properties()
     } else if (bootloader.find("A710Y") != std::string::npos) {
 
         /* SM-A710Y */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/a7xeltedo/a7xelte:7.0/MMB29K/A710YZTU1BQK2:user/release-keys");
-        property_override("ro.system.build.fingerprint", "samsung/a7xeltedo/a7xelte:7.0/MMB29K/A710YZTU1BQK2:user/release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/a7xeltedo/a7xelte:6.0.1/MMB29K/A710YZTU1BQK2:user/release-keys");
+        property_override("ro.system.build.fingerprint", "samsung/a7xeltedo/a7xelte:6.0.1/MMB29K/A710YZTU1BQK2:user/release-keys");
         property_override("ro.build.description", "a7xeltedo-user 6.0.1 MMB29K A710YZTU1BQK2 release-keys");
         property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-A710Y");
         property_override_dual("ro.product.device", "ro.vendor.product.device", "a7xeltedo");
