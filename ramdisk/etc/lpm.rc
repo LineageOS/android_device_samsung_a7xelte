@@ -1,0 +1,12 @@
+# LPM
+service lpm /system/vendor/bin/lpm
+    user system
+    group graphics input
+    seclabel u:r:lpm:s0
+    critical
+    disabled
+
+# Switch out charger to lpm
+on property:ro.bootmode=charger
+    stop charger
+    start lpm

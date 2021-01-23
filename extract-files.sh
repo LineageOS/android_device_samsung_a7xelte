@@ -71,5 +71,7 @@ patchelf --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-fl26.so $BLOB_
 patchelf --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-fl26.so $BLOB_ROOT/lib/libsec-ril-dsds.so
 (perl -pi -e "s/\/system\/bin\/gpsd/\/vendor\/bin\/gpsd/g" $BLOB_ROOT/lib/libsec-ril.so)
 (perl -pi -e "s/\/system\/bin\/gpsd/\/vendor\/bin\/gpsd/g" $BLOB_ROOT/lib/libsec-ril-dsds.so)
+# TODO: convert this line to use 'perl' instead of 'sed'.
+(sed -i -e 's|/system/media|/vendor/media|g' $BLOB_ROOT/vendor/bin/lpm)
 
 "${MY_DIR}/setup-makefiles.sh"
