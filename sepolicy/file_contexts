@@ -1,0 +1,1 @@
+/(vendor|system/vendor)/bin/lpm              u:object_r:lpm_exec:s0

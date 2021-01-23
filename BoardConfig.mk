@@ -64,3 +64,6 @@ TARGET_LD_SHIM_LIBS += \
 # Legacy BLOB Support
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/vendor/bin/hw/rild=27
+
+#SELinux
+BOARD_SEPOLICY_DIRS += device/samsung/a7xelte/sepolicy

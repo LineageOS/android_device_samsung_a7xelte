@@ -1,0 +1,46 @@
+# allow charger lpm_exec:file entrypoint;
+#
+# # Opening screen on Home/Power button presses
+# allow charger input_device:dir { open read search write};
+# allow charger input_device:chr_file r_file_perms;
+#
+# # Rebooting or powering off the device on either plug out or power button long press
+# allow charger powerctl_prop:property_service set;
+# allow charger property_socket:sock_file write;
+# # allow charger init:unix_stream_socket connectto;
+#
+# # Executing vendor libraries for image loading
+# allow charger self:process execmem;
+# allow charger ashmem_device:chr_file execute;
+#
+# # Non Critical Permissions (honestly, I don't know why this is used)
+# # allow charger self:capability { net_admin sys_resource dac_override };
+# # allow charger mediaserver_exec:file { getattr read };
+#
+# # FB access
+# allow charger graphics_device:chr_file rw_file_perms;
+# allow charger graphics_device:dir r_dir_perms;
+#
+# # For iterating all inputs, FB, power_supply, and light emitting devices
+# allow charger sysfs_input:dir r_dir_perms;
+# allow charger sysfs_light:dir r_dir_perms;
+# allow charger sysfs_usb_supply:dir r_dir_perms;
+# allow charger sysfs_graphics:dir r_dir_perms;
+#
+# # Access to light emitting devices (from the lights.*.so) (OLED backlight)
+# allow charger sysfs_light:file { open read write };
+#
+# # Access to power regulator and charger
+# allow charger sysfs_usb_supply:file { open read write };
+#
+# # Suspend control (from libsuspend)
+# allow charger sysfs_power:file { getattr open read write };
+#
+# # Persistent battery parameters (e.g. charge cycles, battery age, max charge, etc...)
+# # Accesses /efs/ partition
+# allow charger efs_file:dir search;
+# allow charger efs_file:file { read write open };
+# allow charger app_efs_file:dir search;
+# allow charger app_efs_file:file { open read write };
+# allow charger battery_efs_file:dir search;
+# allow charger battery_efs_file:file { open read write };
