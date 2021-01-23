@@ -147,6 +147,11 @@ PRODUCT_COPY_FILES += \
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
 
+# LPM - The charger ui from Samsung's default ROM
+PRODUCT_PACKAGES += \
+    libsuspend \
+    lpm.rc
+
 # Inherit from universal7580-common
 $(call inherit-product, device/samsung/universal7580-common/device-common.mk)
 
