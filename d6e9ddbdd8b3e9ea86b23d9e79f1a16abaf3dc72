@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1c4acca_1a25805b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 27948
+      },
+      "writtenOn": "2022-01-02T11:47:52Z",
+      "side": 1,
+      "message": "Comming from XDA, this patch should switch the gnss transport to hwbinder. ~Thanks",
+      "revId": "d6e9ddbdd8b3e9ea86b23d9e79f1a16abaf3dc72",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
